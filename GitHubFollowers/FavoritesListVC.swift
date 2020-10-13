@@ -13,4 +13,5 @@ class FavoritesListVC: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = .systemBlue
     }
+    
 }
