@@ -73,7 +73,10 @@ class SearchVC: UIViewController {
     
     @objc private func pushFollowerListVC() {
         // TODO: add username validation, see https://github.com/shinnn/github-username-regex
-        guard isUsernameEntered else { return }
+        guard isUsernameEntered else {
+            presentGFAlertOnMainThread(title: "Empty Username", message: "Please enter a username. We need to know who to look for 🧐", buttonTitle: "Ok")
+            return
+        }
         
         let followerListVC = FollowerListVC()
         followerListVC.username = usernameTextField.text
