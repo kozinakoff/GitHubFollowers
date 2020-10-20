@@ -23,7 +23,7 @@
 		806C1F6A253F5562005EB6F9 /* Follower.swift in Sources */ = {isa = PBXBuildFile; fileRef = 806C1F69253F5562005EB6F9 /* Follower.swift */; };
 		806C1F6D253F5606005EB6F9 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 806C1F6C253F5606005EB6F9 /* User.swift */; };
 		806C1F72253F5AA6005EB6F9 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 806C1F71253F5AA6005EB6F9 /* NetworkManager.swift */; };
-		806C1F76253F67EF005EB6F9 /* ErrorMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 806C1F75253F67EF005EB6F9 /* ErrorMessage.swift */; };
+		806C1F76253F67EF005EB6F9 /* GFError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 806C1F75253F67EF005EB6F9 /* GFError.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,7 +45,7 @@
 		806C1F69253F5562005EB6F9 /* Follower.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Follower.swift; sourceTree = "<group>"; };
 		806C1F6C253F5606005EB6F9 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		806C1F71253F5AA6005EB6F9 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
-		806C1F75253F67EF005EB6F9 /* ErrorMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorMessage.swift; sourceTree = "<group>"; };
+		806C1F75253F67EF005EB6F9 /* GFError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFError.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -151,7 +151,7 @@
 		806C1F74253F67D3005EB6F9 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
-				806C1F75253F67EF005EB6F9 /* ErrorMessage.swift */,
+				806C1F75253F67EF005EB6F9 /* GFError.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -232,7 +232,7 @@
 				806C1F61253E0E22005EB6F9 /* UIViewController+Ext.swift in Sources */,
 				80071263253580C800F25FBC /* GFButton.swift in Sources */,
 				8007125D2534E32600F25FBC /* SearchVC.swift in Sources */,
-				806C1F76253F67EF005EB6F9 /* ErrorMessage.swift in Sources */,
+				806C1F76253F67EF005EB6F9 /* GFError.swift in Sources */,
 				806C1F5B253E055C005EB6F9 /* GFBodyLabel.swift in Sources */,
 				806C1F6A253F5562005EB6F9 /* Follower.swift in Sources */,
 				806C1F58253E03B0005EB6F9 /* GFTitleLabel.swift in Sources */,
