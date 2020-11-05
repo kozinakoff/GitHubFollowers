@@ -7,6 +7,12 @@
 
 import UIKit
 
+protocol FollowerListVCDelegate: class {
+    
+    func didRequestFollowers(for username: String)
+    
+}
+
 class FollowerListVC: UIViewController {
     
     enum Section {
@@ -123,6 +129,7 @@ extension FollowerListVC: UICollectionViewDelegate {
         let follower = activeArray[indexPath.item]
         let destinationVC = UserInfoVC()
         destinationVC.username = follower.login
+        destinationVC.delegate = self
         let navController = UINavigationController(rootViewController: destinationVC)
         present(navController, animated: true)
     }
@@ -143,4 +150,19 @@ extension FollowerListVC: UISearchResultsUpdating, UISearchBarDelegate {
         updateData(on: followers)
     }
     
+}
+
+extension FollowerListVC: FollowerListVCDelegate {
+    
+    func didRequestFollowers(for username: String) {
+        self.username = username
+        title = username
+        page = 1
+        followers.removeAll()
+        filteredFollowers.removeAll()
+        // TODO: we have an issue when user has only one follower
+        collectionView.setContentOffset(.zero, animated: true)
+        fetchFollowers(for: username, page: page)
+    }
+        
 }
