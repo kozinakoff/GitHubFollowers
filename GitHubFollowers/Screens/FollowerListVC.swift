@@ -75,9 +75,7 @@ class FollowerListVC: UIViewController {
             
             switch result {
             case .success(let followers):
-                if followers.count < 100 {
-                    self.hasMoreFollowers = false
-                }
+                self.hasMoreFollowers = followers.count < 100 ? false : true
                 self.followers.append(contentsOf: followers)
                 if self.followers.isEmpty {
                     let message = "This user doesn't have any followers ☹️"
@@ -160,9 +158,8 @@ extension FollowerListVC: FollowerListVCDelegate {
         page = 1
         followers.removeAll()
         filteredFollowers.removeAll()
-        // TODO: we have an issue when user has only one follower
-        collectionView.setContentOffset(.zero, animated: true)
         fetchFollowers(for: username, page: page)
+        updateData(on: followers)
     }
         
 }
