@@ -97,7 +97,7 @@ class FollowerListVC: UIViewController {
             (collectionView, indexPath, follower) -> UICollectionViewCell? in
             
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: FollowerCell.reuseId, for: indexPath) as! FollowerCell
-            cell.setFollower(follower: follower)
+            cell.set(follower: follower)
             return cell
         })
     }
