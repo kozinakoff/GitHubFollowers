@@ -14,9 +14,9 @@ class NetworkManager {
     let cache = NSCache<NSString, UIImage>()
     
     private let baseUrl = "https://api.github.com/users/"
+    private let perPageCount = 100
     
     private init() {}
-    
     
     /// Get GitHubUser  list of followers
     /// - Parameters:
@@ -24,7 +24,7 @@ class NetworkManager {
     ///   - page: page number
     ///   - completion: completion handler
     func getFollowers(for username: String, page: Int, completion: @escaping (Result<[Follower], GFError>) -> Void) {
-        let endpoint = baseUrl + "\(username)/followers?per_page=100&page=\(page)"
+        let endpoint = baseUrl + "\(username)/followers?per_page=\(perPageCount)&page=\(page)"
         
         guard let url = URL(string: endpoint) else {
             completion(.failure(.invalidUsername))
@@ -61,7 +61,6 @@ class NetworkManager {
         
         task.resume()
     }
-    
     
     /// Get GitHub user info
     /// - Parameters:
@@ -106,7 +105,6 @@ class NetworkManager {
         task.resume()
     }
     
-    
     /// Download avatar image by url
     /// - Parameters:
     ///   - url: image url
@@ -140,5 +138,4 @@ class NetworkManager {
         }
         task.resume()
     }
-    
 }

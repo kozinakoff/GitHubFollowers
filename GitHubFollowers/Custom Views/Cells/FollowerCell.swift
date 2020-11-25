@@ -57,6 +57,5 @@ class FollowerCell: UICollectionViewCell {
         ])
         
         translatesAutoresizingMaskIntoConstraints = false
-    }
-    
+    }    
 }

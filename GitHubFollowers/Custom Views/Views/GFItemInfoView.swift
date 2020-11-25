@@ -50,8 +50,7 @@ class GFItemInfoView: UIView {
             countLabel.heightAnchor.constraint(equalToConstant: 18)
         ])
     }
-    
-    
+        
     /// Sets up item info view
     /// - Parameters:
     ///   - itemInfoType: repos, gists, follower or following
@@ -74,5 +73,4 @@ class GFItemInfoView: UIView {
         
         countLabel.text = String(withCount)
     }
-    
 }

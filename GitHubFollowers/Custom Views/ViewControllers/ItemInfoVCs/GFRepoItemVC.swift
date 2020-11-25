@@ -9,8 +9,7 @@ import UIKit
 
 protocol GFRepoItemVCDelegate: class {
     
-    func didTapGitHubProfile(for user: User)
-    
+    func didTapGitHubProfile(for user: User)    
 }
 
 class GFRepoItemVC: GFItemInfoVC {
@@ -40,5 +39,4 @@ class GFRepoItemVC: GFItemInfoVC {
     override func actionButtonTapped() {
         delegate.didTapGitHubProfile(for: user)
     }
-    
 }

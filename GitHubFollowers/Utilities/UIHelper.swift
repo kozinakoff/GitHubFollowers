@@ -22,5 +22,4 @@ struct UIHelper {
         
         return flowLayout
     }
-    
 }

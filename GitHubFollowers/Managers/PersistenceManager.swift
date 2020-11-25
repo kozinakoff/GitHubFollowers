@@ -8,18 +8,14 @@
 import Foundation
 
 enum PersistenceActionType {
-    
     case add, remove
-    
 }
 
 enum PersistenceManager {
     
     private static let defaults = UserDefaults.standard
     
-    enum Keys {
-        static let favorites = "favorites"
-    }
+    enum Keys { static let favorites = "favorites" }
     
     static func updateWith(favorite: Follower, actionType: PersistenceActionType, completion: @escaping (GFError?) -> Void) {
         retrieveFavorites { result in
@@ -70,5 +66,4 @@ enum PersistenceManager {
             return .unableToFavorite
         }
     }
-    
 }

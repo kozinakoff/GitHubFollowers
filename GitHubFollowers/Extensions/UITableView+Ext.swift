@@ -8,8 +8,7 @@
 import UIKit
 
 extension UITableView {
-    
-    
+        
     /// Reloads TableView's data on main thread
     /// - Parameter action: a code that should be invoked after reloading the data
     func reloadDataOnMainThread(action: @escaping () -> Void) {
@@ -21,6 +20,5 @@ extension UITableView {
     
     func removeExcessCells() {
         tableFooterView = UIView(frame: .zero)
-    }
-    
+    }    
 }

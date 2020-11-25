@@ -10,7 +10,6 @@ import UIKit
 protocol GFFollowerItemVCDelegate: class {
     
     func didTapGetFollowers(for user: User)
-    
 }
 
 class GFFollowerItemVC: GFItemInfoVC {
@@ -39,6 +38,5 @@ class GFFollowerItemVC: GFItemInfoVC {
     
     override func actionButtonTapped() {
         delegate.didTapGetFollowers(for: user)
-    }
-    
+    }    
 }

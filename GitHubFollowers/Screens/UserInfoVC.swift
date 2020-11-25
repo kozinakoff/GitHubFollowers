@@ -9,8 +9,7 @@ import UIKit
 
 protocol UserInfoVCDelegate: class {
     
-    func didRequestFollowers(for username: String)
-    
+    func didRequestFollowers(for username: String)    
 }
 
 class UserInfoVC: UIViewController {
@@ -115,7 +114,6 @@ class UserInfoVC: UIViewController {
     @objc private func dismissVC() {
         dismiss(animated: true)
     }
-
 }
 
 extension UserInfoVC: GFRepoItemVCDelegate, GFFollowerItemVCDelegate {
@@ -136,5 +134,4 @@ extension UserInfoVC: GFRepoItemVCDelegate, GFFollowerItemVCDelegate {
         delegate.didRequestFollowers(for: user.login)
         dismissVC()
     }
-        
 }
